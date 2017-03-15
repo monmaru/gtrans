@@ -20,7 +20,7 @@ func main() {
 	app.Version = "1.0"
 	app.Usage = "Google Translate API from the terminal"
 	app.Action = func(c *cli.Context) error {
-		if c.NArg() <= 2 {
+		if c.NArg() < 2 {
 			fmt.Println("Ex: gtrans en|jp target text")
 			return nil
 		}
